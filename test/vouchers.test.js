@@ -357,7 +357,7 @@ describe("Vouchers Contract", () => {
 
       it("Should fail if Bob tries to buy since he's not whitelisted", async () => {
         await expect(
-          this.vouchers.connect(this.alice).buyVouchers(
+          this.vouchers.connect(this.bob).buyVouchers(
             thirdDrop,
             merkleTree.getHexProof(convertToSolidity(this.bob.address)),
              '2', '3', '3', '2'))
